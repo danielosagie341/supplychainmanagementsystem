@@ -6,7 +6,7 @@ import axios from "axios";
 // export const authEvents = new EventEmitter();
 const axiosInstance = axios.create({
   // baseURL: "https://00f6-102-91-77-189.ngrok-free.app/v1",
-  baseURL: "http://localhost:5050/api/v1",
+  baseURL: "https://supplychainmanagementsystem.onrender.com/api/v1",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
