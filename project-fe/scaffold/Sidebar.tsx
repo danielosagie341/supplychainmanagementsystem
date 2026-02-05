@@ -38,7 +38,7 @@ export function Sidebars({ children }: { children?: React.ReactNode }) {
   const adminLinks = [
     {
       label: "Users",
-      href: "/dashboard/users",
+      href: "/dashboard/user",
       icon: (
         <IconUserBolt className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
