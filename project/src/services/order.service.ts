@@ -34,6 +34,10 @@ export default class OrderService {
     
     console.log('🔍 DEBUG - Order created successfully:', JSON.stringify(newOrder, null, 2));
 
+    if (!user) {
+      throw new Error('User not found');
+    }
+
     user.order.push(newOrder.id)
     await user.save()
     

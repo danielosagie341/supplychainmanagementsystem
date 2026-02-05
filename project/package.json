@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server.ts",
-    "build": "rimraf ./dist && tsc --outDir ./dist/src && mkdir -p ./dist/artifacts/contracts/SupplyChain.sol && cp artifacts/contracts/SupplyChain.sol/SupplyChain.json ./dist/artifacts/contracts/SupplyChain.sol/ && echo 'dist folder created'",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node dist/src/server.js",
+    "dev": "nodemon src/server.ts",
+    "build": "rimraf ./dist && tsc && shx mkdir -p ./dist/artifacts/contracts/SupplyChain.sol && shx cp artifacts/contracts/SupplyChain.sol/SupplyChain.json ./dist/artifacts/contracts/SupplyChain.sol/ && echo 'dist folder created'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "keywords": [],
@@ -56,6 +57,7 @@
     "hardhat": "^2.23.0",
     "nodemon": "^3.1.9",
     "prettier": "^3.3.3",
+    "shx": "^0.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   }
